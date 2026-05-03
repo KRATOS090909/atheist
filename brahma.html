@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="universe-bg"></div>
+    <!-- Audio Elements - Moved to Top -->
+    <audio id="bg-audio" loop src="universe-bg.mp3"></audio>
+
+    <video autoplay muted loop id="bg-video" class="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+    </video>
     <div id="particles-js"></div>
     
     <div class="analysis-page">
@@ -262,6 +267,7 @@
         <div id="insult" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Insulting Lord Shiva's "Beggar" Form</h2>
             <h3 class="incident-subtitle">(Insulting Lord Shiva)</h3>
+            <img src="insult_shiva.png" class="incident-image" alt="Insulting Lord Shiva">
             
             <p class="incident-intro">
                 There are accounts where Brahma's arrogance led him to insult Shiva's appearance, which resulted in immediate punishment.
@@ -296,6 +302,7 @@
         <div id="hunger" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Creation of Hunger and Fear</h2>
             <h3 class="incident-subtitle">(Creation of Hunger and Fear)</h3>
+            <img src="hunger_fear.png" class="incident-image" alt="Creation of Hunger and Fear">
             
             <p class="incident-intro">
                 In a more philosophical critique found in certain Puranic commentaries, Brahma is viewed as the source of "biological" problems.
@@ -325,7 +332,7 @@
         <div id="asuras" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Creation of the Asuras (Demons)</h2>
             <h3 class="incident-subtitle">(Creation of Asuras from Thighs)</h3>
-            <img src="asuras_text.jpg" class="incident-image" alt="Creation of the Asuras">
+            <img src="asuras.png" class="incident-image" alt="Creation of the Asuras">
             
             <p class="incident-intro">
                 Brahma is often critiqued for creating the "darker" aspects of existence, sometimes by mistake or through a lack of self-control.
@@ -360,7 +367,7 @@
         <div id="narada" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Cursing his Son, Narada</h2>
             <h3 class="incident-subtitle">(Life of Lust Curse)</h3>
-            <img src="narada_text.jpg" class="incident-image" alt="Cursing Narada">
+            <img src="narada.png" class="incident-image" alt="Cursing Narada">
             
             <p class="incident-intro">
                 Brahma's anger often flared when his children chose spiritual paths over the physical work of creation.
@@ -395,7 +402,7 @@
         <div id="arrogance" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Arrogance of "The First Born"</h2>
             <h3 class="incident-subtitle">(The Ego of Creation)</h3>
-            <img src="arrogance_text.jpg" class="incident-image" alt="Arrogance of First Born">
+            <img src="arrogance.png" class="incident-image" alt="Arrogance of First Born">
             
             <p class="incident-intro">
                 Brahma frequently claimed he was the only creator, ignoring that he himself originated from the navel of Vishnu.
@@ -430,7 +437,7 @@
         <div id="ravana" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Giving the "Atma-Linga" to Ravana</h2>
             <h3 class="incident-subtitle">(Granting Boons to Evil)</h3>
-            <img src="ravana_text.jpg" class="incident-image" alt="Empowering Ravana">
+            <img src="ravana.png" class="incident-image" alt="Empowering Ravana">
             
             <p class="incident-intro">
                 Brahma's most frequent "wrong" is his lack of foresight when granting boons to evil beings.
@@ -465,7 +472,7 @@
         <div id="sages" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Cursing the Sages for Questioning Him</h2>
             <h3 class="incident-subtitle">(Sensitivity to Criticism)</h3>
-            <img src="sages_text.jpg" class="incident-image" alt="Cursing the Sages">
+            <img src="sages.png" class="incident-image" alt="Cursing the Sages">
             
             <p class="incident-intro">
                 Brahma was known to be sensitive to criticism from his own created sages (Rishis).
@@ -497,6 +504,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- Particles.js for background effect -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

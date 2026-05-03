@@ -155,12 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
         const y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
         
-        const universeBg = document.querySelector('.universe-bg');
+        const universeBg = document.querySelector('.bg-video');
         const particlesDiv = document.getElementById('particles-js');
         
         if (universeBg) {
             // Move the background slowly for depth
-            universeBg.style.transform = `translate(${x * -20}px, ${y * -20}px) scale(1.1)`;
+            universeBg.style.transform = `translate(${x * -10}px, ${y * -10}px) scale(1.05)`;
         }
         
         if (particlesDiv) {
@@ -205,4 +205,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // Audio Logic - Continuous Playback
+    const audio = document.getElementById('bg-audio');
+
+    if (audio) {
+        // Ensure volume is up and it's not muted
+        audio.muted = false;
+        audio.volume = 0.5; // Set a balanced volume
+
+        const tryPlayAudio = () => {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    console.log("Background audio initiated.");
+                    // Remove listeners once playing
+                    ['mousedown', 'mousemove', 'scroll', 'keydown', 'touchstart'].forEach(type => {
+                        document.removeEventListener(type, tryPlayAudio);
+                    });
+                }).catch(err => {
+                    // Autoplay might be blocked by browser until interaction
+                });
+            }
+        };
+
+        // Aggressive attempt to play on any early interaction
+        ['mousedown', 'mousemove', 'scroll', 'keydown', 'touchstart'].forEach(type => {
+            document.addEventListener(type, tryPlayAudio, { once: true, passive: true });
+        });
+
+        // Backup polling to ensure it keeps playing if it was somehow paused
+        setInterval(() => {
+            if (audio.paused) {
+                audio.play().catch(() => {});
+            }
+        }, 2000);
+    }
 });

@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="universe-bg"></div>
+    <!-- Audio Elements - Moved to Top -->
+    <audio id="bg-audio" loop src="universe-bg.mp3"></audio>
+
+    <video autoplay muted loop id="bg-video" class="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+    </video>
     <div id="particles-js"></div>
     
     <div class="analysis-page">
@@ -33,6 +38,7 @@
         <div id="shambuka" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Killing of Shambuka</h2>
             <h3 class="incident-subtitle">(Caste-Based Execution)</h3>
+            <img src="shambuka.png" class="incident-image" alt="The Killing of Shambuka">
             
             <p class="incident-intro">
                 Rama executed a Shudra ascetic, Shambuka, for performing penance (Tapasya), which was supposedly the cause of a Brahmin child's death. This is one of the most heavily critiqued episodes in the Ramayana.
@@ -77,6 +83,7 @@
         <div id="vali" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Killing of Vali</h2>
             <h3 class="incident-subtitle">(Hidden Attack)</h3>
+            <img src="vali.png" class="incident-image" alt="The Killing of Vali">
             
             <p class="incident-intro">
                 Rama killed the Vanara King Vali while hiding behind a tree, violating the code that a warrior should not strike an opponent who is already engaged with someone else.
@@ -116,6 +123,7 @@
         <div id="sita" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Rejection & Exile of Sita</h2>
             <h3 class="incident-subtitle">(Abandonment of a Pregnant Wife)</h3>
+            <img src="sita_exile.png" class="incident-image" alt="The Rejection & Exile of Sita">
             
             <p class="incident-intro">
                 Rama's treatment of Sita after her rescue from Ravana, and her later exile while pregnant, are among the most heavily critiqued episodes in the entire epic.
@@ -155,6 +163,7 @@
         <div id="meat" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Evidence of Meat Eating</h2>
             <h3 class="incident-subtitle">(The Diet of the "Divine" King)</h3>
+            <img src="meat_eating.png" class="incident-image" alt="Evidence of Meat Eating">
             
             <p class="incident-intro">
                 The Valmiki Ramayana contains several verses indicating that Rama, as a Kshatriya (warrior caste) of that era, consumed meat — specifically during his exile. This directly contradicts the modern narrative of a purely vegetarian, sattvic deity.
@@ -219,6 +228,7 @@
         <div id="valmiki-meat" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">Lord Rama in the Valmiki Ramayana</h2>
             <h3 class="incident-subtitle">(The Original Account of Meat Consumption)</h3>
+            <img src="meat_eating.png" class="incident-image" alt="Rama in Valmiki Ramayana">
             
             <p class="incident-intro">
                 The Valmiki Ramayana, often considered the original and more historical account, contains several verses describing Rama hunting and eating meat. This section provides the comprehensive scriptural record.
@@ -273,6 +283,7 @@
         <div id="kshatriya" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The Kshatriya Truth</h2>
             <h3 class="incident-subtitle">(The Historical Rewriting of Rama)</h3>
+            <img src="meat_eating.png" class="incident-image" alt="The Kshatriya Truth">
             
             <p class="incident-intro">
                 A broader analysis of how Rama's image was systematically altered across centuries to match shifting social and religious values.
@@ -322,6 +333,7 @@
         <div id="ghee" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The "Dog & Sacred Ghee" Analogy</h2>
             <h3 class="incident-subtitle">(Comparing Sita to Defiled Butter)</h3>
+            <img src="ghee_analogy.png" class="incident-image" alt="The Dog & Sacred Ghee Analogy">
             
             <p class="incident-intro">
                 In one of the most dehumanizing verses attributed to Rama, he compares his own wife Sita — who was kidnapped against her will — to sacrificial ghee that has been licked by a dog, declaring her no longer "useable" or acceptable to him.
@@ -361,6 +373,7 @@
         <div id="cruelty" class="analysis-content glass-panel incident-section" style="display: none;">
             <h2 class="incident-title">The "Evil/Cruel" Perspective</h2>
             <h3 class="incident-subtitle">(The Perspective of Humanity)</h3>
+            <img src="agni_pariksha.png" class="incident-image" alt="Sita's Trial by Fire">
             
             <p class="incident-intro">
                 From a modern or purely emotional standpoint, Rama's words and actions toward Sita are often seen as deeply hurtful, sexist, and unfair. This section examines the cruelty through a human lens.
@@ -405,6 +418,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- Particles.js for background effect -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
