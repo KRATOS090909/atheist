@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (audio) {
         // Ensure volume is up and it's not muted
         audio.muted = false;
-        audio.volume = 0.5; // Set a balanced volume
+        audio.volume = 1.0; // Set volume to max (loud)
 
         const tryPlayAudio = () => {
             if (audio.paused) {
